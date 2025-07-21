@@ -1,6 +1,8 @@
+import { PORT } from "../../backend/server";
+
 export async function fetchCryptos() {
     try {
-        const response = await fetch("http://localhost:8080/api/cryptos");
+        const response = await fetch(`http://localhost:${PORT}/api/cryptos`);
         
         if(!response.ok){
             throw new Error(`Error de red ${response.status}`);
@@ -14,7 +16,7 @@ export async function fetchCryptos() {
 };
 export async function fetchCryptosPorCategoria() {
     try {
-        const response = await fetch("http://localhost:8080/api/cryptos/categorias");
+        const response = await fetch(`http://localhost:${PORT}/api/cryptos/categorias`);
         
         if(!response.ok){
             throw new Error(`Error de red ${response.status}`);

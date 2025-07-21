@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+export const PORT = process.env.PORT || 8080;
 const url = "https://pro-api.coinmarketcap.com";
 const apiKey = "a9271d10-6598-439a-8659-ca5fdb707e40";
 
